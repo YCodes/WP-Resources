@@ -1,0 +1,18 @@
+<script>
+$(window).scroll(function () {
+	if( $(window).scrollTop() > $('.site-header').offset().top && !($('.site-header').hasClass('fixed'))){
+		$('.site-header').addClass('fixed');
+	} 
+
+	else if ($(window).scrollTop() == 0){
+		$('.site-header').removeClass('fixed');
+	}
+});
+</script>
+
+.fixed {
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 999;
+}
